@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout &mdash; Aurelia</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="disclaimer">
+      Demo store &mdash; no real payments are processed. Do not enter real
+      card details.
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">Aurelia<span>.</span></a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="../index.html">All Projects</a>
+          <a href="shop.html">Shop</a>
+          <a href="cart.html" class="cart-link">
+            Cart <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section container">
+      <div id="checkout-content"></div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        &copy; 2026 Aurelia Fine Jewellery. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

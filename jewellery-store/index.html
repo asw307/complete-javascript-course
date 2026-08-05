@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurelia &mdash; Fine Jewellery</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="disclaimer">
+      Demo store &mdash; no real payments are processed
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">Aurelia<span>.</span></a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="../index.html">All Projects</a>
+          <a href="shop.html">Shop</a>
+          <a href="cart.html" class="cart-link">
+            Cart <span class="cart-count" data-cart-count>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Jewellery made to be kept forever</h1>
+        <p>
+          Ethically sourced diamonds and precious metals, hand-finished by
+          master jewellers. Discover pieces designed to become heirlooms.
+        </p>
+        <a class="btn" href="shop.html">Shop the Collection</a>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <h2>Featured Pieces</h2>
+        <p>A curated selection from our latest collection</p>
+      </div>
+      <div class="grid" id="featured-grid"></div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <h2>Shop by Category</h2>
+      </div>
+      <div class="categories" id="category-links"></div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        &copy; 2026 Aurelia Fine Jewellery. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
