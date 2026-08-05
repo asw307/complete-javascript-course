@@ -1,11 +1,9 @@
-name: Deploy sites to GitHub Pages
+name: Deploy jewellery-store to GitHub Pages
 
 on:
   push:
     branches: [master]
     paths:
-      - "site-hub/**"
-      - "tools-website/**"
       - "jewellery-store/**"
   workflow_dispatch:
 
@@ -28,20 +26,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Assemble site
-        run: |
-          mkdir -p dist
-          cp site-hub/index.html dist/
-          cp -r tools-website dist/tools-website
-          cp -r jewellery-store dist/jewellery-store
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: jewellery-store
 
       - name: Deploy to GitHub Pages
         id: deployment
