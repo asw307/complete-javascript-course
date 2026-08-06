@@ -1,10 +1,12 @@
-name: Deploy jewellery-store to GitHub Pages
+name: Deploy sites to GitHub Pages
 
 on:
   push:
     branches: [master]
     paths:
       - "jewellery-store/**"
+      - "analytics-tools/**"
+      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -26,13 +28,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # jewellery-store serves from the site root; analytics-tools from /analytics-tools/.
+      # To swap which one is at the root, change these two copy lines.
+      - name: Assemble site
+        run: |
+          mkdir -p dist
+          cp -r jewellery-store/. dist/
+          cp -r analytics-tools dist/analytics-tools
+          echo "--- dist tree ---"
+          find dist -maxdepth 2 | sort
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: jewellery-store
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
